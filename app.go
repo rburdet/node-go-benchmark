@@ -6,8 +6,9 @@ import (
 	"sync"
 )
 
-const url string = "http://localhost:6667"
+const url string = "http://localhost:6000"
 const N int = 10
+const PORT string = ":8000"
 
 func doRequests() []string {
 	var wg sync.WaitGroup
@@ -31,5 +32,5 @@ func main() {
 		responses := doRequests()
 		c.JSON(200, responses)
 	})
-	r.Run() // listen and serve on 0.0.0.0:8080
+	r.Run(PORT) // listen and serve on 0.0.0.0:8000
 }

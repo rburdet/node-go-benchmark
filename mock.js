@@ -2,7 +2,7 @@ const express = require('express');
 
 const app = express();
 
-const PORT = 6667;
+const PORT = 6000;
 
 app.get('/', (req, res) => {
   setTimeout( () => 
