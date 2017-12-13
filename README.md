@@ -28,8 +28,8 @@ Do your benchmarks :)
 For example: 
 
 ```
-ab -n 1000 -c 50 localhost:7000/bench
-ab -n 1000 -c 50 localhost:8000/bench
+wrk -c1000 -t1 http://localhost:7000/bench
+wrk -c1000 -t1 http://localhost:8000/bench
 ```
 
 ## Description 
